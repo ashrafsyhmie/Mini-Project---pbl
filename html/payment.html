@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/payment.css" />
+    <title>Payment Page</title>
   </head>
+
   <body>
     <div class="payment">
       <div class="div">
@@ -15,83 +17,100 @@
         <p class="p">
           Choose payment option and fill in the requested information
         </p>
-        <div class="overlap-group">
-          <img class="line" src="img/line-1.svg" />
-          <div class="frame-2">
-            <div class="frame-3">
-              <input
-                type="radio"
-                class="radio-button"
-                name="type"
-                value="Cash"
-              />
-              <div class="text-wrapper-2">Cash</div>
-              <input
-                type="radio"
-                class="radio-button"
-                name="type"
-                value="Credit card"
-              />
+        <form action="">
+          <div class="overlap-group">
+            <img class="line" src="img/line-1.svg" />
+            <div class="frame-2">
+              <div class="frame-3">
+                <input
+                  type="radio"
+                  class="radio-button"
+                  name="type"
+                  value="Cash"
+                />
+                <div class="text-wrapper-2">Cash</div>
+                <input
+                  type="radio"
+                  class="radio-button"
+                  name="type"
+                  value="Credit card"
+                />
 
-              <div class="text-wrapper-2">Credit card</div>
-              <div class="card_logo">
-                <img src="/images/Visa.png" alt="" />
-                <img src="/images/MasterCard.png" alt="" />
-                <img src="/images/ApplePay.png" alt="" />
+                <div class="text-wrapper-2">Credit card</div>
+                <div class="card_logo">
+                  <img src="/images/Visa.png" alt="" />
+                  <img src="/images/MasterCard.png" alt="" />
+                  <img src="/images/ApplePay.png" alt="" />
+                </div>
               </div>
             </div>
+            <div class="frame-5">
+              <div class="text-wrapper-2">First Name</div>
+              <input type="text" required />
+              <div class="rectangle"></div>
+            </div>
+            <div class="frame-6">
+              <div class="text-wrapper-2">Card Number</div>
+              <input type="number" required />
+              <div class="rectangle"></div>
+            </div>
+            <div class="frame-7">
+              <div class="text-wrapper-2">Postal Code</div>
+              <input type="text" required />
+              <div class="rectangle"></div>
+            </div>
+            <div class="frame-8">
+              <div class="text-wrapper-2">Email</div>
+              <input type="text" required />
+              <div class="rectangle"></div>
+            </div>
+            <div class="frame-9">
+              <div class="text-wrapper-3">Expiration</div>
+              <table>
+                <tr>
+                  <td><input type="text" class="expiration" required /></td>
+                  <td>&#8195;&#8195;</td>
+                  <td><input type="text" class="cvv" required /></td>
+                </tr>
+              </table>
+            </div>
+            <div class="frame-10">
+              <div class="text-wrapper-2">CVV</div>
+            </div>
+            <div class="frame-11">
+              <div class="text-wrapper-2">Last Name</div>
+              <input type="text" required />
+            </div>
           </div>
-          <div class="frame-5">
-            <div class="text-wrapper-2">First Name</div>
-            <input type="text" />
-            <div class="rectangle"></div>
+          <div class="overlap-3">
+            <img class="line-2" src="img/line-3.svg" />
+            <div class="text-wrapper-4">Transaction Date:</div>
+            <p name="transaction date"></p>
+            <div class="text-wrapper-5">Payment Setting</div>
+
+            <div class="text-wrapper-6">Subtotal:</div>
+            <p name="subtotal"></p>
+            <div class="text-wrapper-7">Hour:</div>
+            <p name="hour"></p>
+            <img class="line-3" src="img/line-2.svg" />
+
+            <div class="overlap-4">
+              <input
+                type="submit"
+                value="Done"
+                onclick="redirectToAnotherPage()"
+                class="rectangle-5 text-wrapper-8"
+              />
+              <div class="">Done</div>
+            </div>
           </div>
-          <div class="frame-6">
-            <div class="text-wrapper-2">Card Number</div>
-            <input type="number" />
-            <div class="rectangle"></div>
-          </div>
-          <div class="frame-7">
-            <div class="text-wrapper-2">Postal Code</div>
-            <input type="text" />
-            <div class="rectangle"></div>
-          </div>
-          <div class="frame-8">
-            <div class="text-wrapper-2">Email</div>
-            <input type="text" />
-            <div class="rectangle"></div>
-          </div>
-          <div class="frame-9">
-            <div class="text-wrapper-3">Expiration</div>
-            <table>
-              <tr>
-                <td><input type="text" class="expiration" /></td>
-                <td>&#8195;&#8195;</td>
-                <td><input type="text" class="cvv" /></td>
-              </tr>
-            </table>
-          </div>
-          <div class="frame-10">
-            <div class="text-wrapper-2">CVV</div>
-          </div>
-          <div class="frame-11">
-            <div class="text-wrapper-2">Last Name</div>
-            <input type="text" />
-          </div>
-        </div>
-        <div class="overlap-3">
-          <img class="line-2" src="img/line-3.svg" />
-          <div class="text-wrapper-4">Transaction Date:</div>
-          <div class="text-wrapper-5">Payment Setting</div>
-          <div class="text-wrapper-6">Subtotal:</div>
-          <div class="text-wrapper-7">Hour:</div>
-          <img class="line-3" src="img/line-2.svg" />
-          <div class="overlap-4">
-            <div class="rectangle-5"></div>
-            <div class="text-wrapper-8">Done</div>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
+    <script>
+      function redirectToAnotherPage() {
+        window.location.href = "order_status.html";
+      }
+    </script>
   </body>
 </html>
