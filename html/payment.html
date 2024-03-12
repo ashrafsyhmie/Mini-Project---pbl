@@ -6,109 +6,117 @@
     <link rel="stylesheet" href="/css/payment.css" />
     <title>Payment Page</title>
   </head>
-
   <body>
     <div class="payment">
-      <div class="div">
-        <div class="overlap">
-          <div class="frame"></div>
-          <div class="text-wrapper">Payment Method</div>
-        </div>
-        <p class="p">
-          Choose payment option and fill in the requested information
-        </p>
-        <form action="">
-          <div class="overlap-group">
-            <img class="line" src="img/line-1.svg" />
-            <div class="frame-2">
-              <div class="frame-3">
-                <input
-                  type="radio"
-                  class="radio-button"
-                  name="type"
-                  value="Cash"
-                />
-                <div class="text-wrapper-2">Cash</div>
-                <input
-                  type="radio"
-                  class="radio-button"
-                  name="type"
-                  value="Credit card"
-                />
+      <h1>Payment method</h1>
 
-                <div class="text-wrapper-2">Credit card</div>
-                <div class="card_logo">
-                  <img src="/images/Visa.png" alt="" />
-                  <img src="/images/MasterCard.png" alt="" />
-                  <img src="/images/ApplePay.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="frame-5">
-              <div class="text-wrapper-2">First Name</div>
-              <input type="text" required />
-              <div class="rectangle"></div>
-            </div>
-            <div class="frame-6">
-              <div class="text-wrapper-2">Card Number</div>
-              <input type="number" required />
-              <div class="rectangle"></div>
-            </div>
-            <div class="frame-7">
-              <div class="text-wrapper-2">Postal Code</div>
-              <input type="text" required />
-              <div class="rectangle"></div>
-            </div>
-            <div class="frame-8">
-              <div class="text-wrapper-2">Email</div>
-              <input type="text" required />
-              <div class="rectangle"></div>
-            </div>
-            <div class="frame-9">
-              <div class="text-wrapper-3">Expiration</div>
-              <table>
-                <tr>
-                  <td><input type="text" class="expiration" required /></td>
-                  <td>&#8195;&#8195;</td>
-                  <td><input type="text" class="cvv" required /></td>
-                </tr>
-              </table>
-            </div>
-            <div class="frame-10">
-              <div class="text-wrapper-2">CVV</div>
-            </div>
-            <div class="frame-11">
-              <div class="text-wrapper-2">Last Name</div>
-              <input type="text" required />
-            </div>
-          </div>
-          <div class="overlap-3">
-            <img class="line-2" src="img/line-3.svg" />
-            <div class="text-wrapper-4">Transaction Date:</div>
-            <p name="transaction date"></p>
-            <div class="text-wrapper-5">Payment Setting</div>
-
-            <div class="text-wrapper-6">Subtotal:</div>
-            <p name="subtotal"></p>
-            <div class="text-wrapper-7">Hour:</div>
-            <p name="hour"></p>
-            <img class="line-3" src="img/line-2.svg" />
-
-            <div class="overlap-4">
-              <input
-                type="submit"
-                value="Done"
-                onclick="redirectToAnotherPage()"
-                class="rectangle-5 text-wrapper-8"
-              />
-              <div class="">Done</div>
-            </div>
-          </div>
-        </form>
-      </div>
+      <h2>Choose payment option and fill in the requested information</h2>
     </div>
+    <form action="">
+      <table
+        align="center"
+        border="0
+        "
+      >
+        <tr>
+          <td>
+            <table border="0" align="center" class="payment_box">
+              <tr align="center">
+                <td width="100">
+                  <input
+                    type="radio"
+                    class="radio-button"
+                    name="type"
+                    value="Cash"
+                  />Cash
+                </td>
+                <td width="100">
+                  <input
+                    type="radio"
+                    class="radio-button"
+                    name="type"
+                    value="Credit card"
+                  />Credit Card
+                </td>
+                <td colspan="2" width="200">
+                  <div class="image_container">
+                    <img src="/images/Visa.png" alt="" />
+                    <img src="/images/MasterCard.png" alt="" />
+                    <img src="/images/ApplePay.png" alt="" />
+                  </div>
+                </td>
+              </tr>
+              <tr align="center">
+                <td colspan="2">
+                  First name
+                  <br />
+                  <input type="text" required />
+                </td>
+                <td colspan="2">
+                  Last Name
+                  <br />
+                  <input type="text" required />
+                </td>
+              </tr>
+              <tr align="center">
+                <td colspan="2">
+                  Card Number
+                  <br />
+                  <input type="number" required />
+                </td>
+                <td width="100">
+                  Expiration
+                  <br />
+                  <input
+                    type="text"
+                    required
+                    size="5"
+                    placeholder="XX/XX"
+                    style="width: 50px"
+                  />
+                </td>
+                <td width="100">
+                  CVV
+                  <br />
+                  <input type="number" required size="3" style="width: 30px" />
+                </td>
+              </tr>
+              <tr align="center">
+                <td colspan="2">
+                  Postal Code
+                  <br />
+                  <input type="number" required />
+                </td>
+                <td colspan="2">
+                  Email
+                  <br />
+                  <input type="email" required />
+                </td>
+              </tr>
+              <tr>
+                <td><br /></td>
+              </tr>
+            </table>
+          </td>
+          <td width="200" class="payment_setting" class="payment_box">
+            <br />
+            ‎ ‎ Transaction Date:
+            <br />
+            ‎ ‎ Hour:
+            <br /><br />
+            ‎ ‎ Subtotal:
+            <br /><br />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <div class="button-container" style="text-align: center">
+        <input type="submit" value="Done" onclick="redirectToOrderStatus()" />
+      </div>
+    </form>
+
     <script>
-      function redirectToAnotherPage() {
+      function redirectToOrderStatus() {
         window.location.href = "order_status.html";
       }
     </script>
