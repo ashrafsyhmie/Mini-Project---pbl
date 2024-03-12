@@ -1,0 +1,45 @@
+input{
+  font-family: "Inter-Regular", Helvetica;
+  background-color: #176bcd;
+  border-radius: 9px;
+  font-size: 18px;
+  color:#f1f5f8;
+  border: 1px solid #f1f5f8;
+}
+
+h2{
+  font-family: "Inter-Regular", Helvetica;
+}
+
+h1{
+  font-family: "Inter-Regular", Helvetica;
+
+}
+
+fieldset{
+  background-color: #fbfbfb;
+  font-family: "Inter-Regular", Helvetica;
+  border-radius: 25px;
+  border: 1px solid #f1f5f8;
+}
+
+body{
+ background-color: #f1f5f8;
+ }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Back{
+  float: right;
+  width: 20%;
+  margin-right: 0px;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 12px;
+  height:30px;
+  overflow:auto;
+}
