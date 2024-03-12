@@ -1,9 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order Status</title>
-  </head>
-  <body></body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cart.css">
+    <title>Order status</title>
+
+    <style>
+        #Order2 {
+            display: none;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div  class="container">
+        <h1>EsWarung</h1>
+        <h2 style="text-align:right">Order Number:</h2>       
+    </div>
+
+    <div>
+        <h2 style="text-align:center">Order Status</h2>
+    </div>
+    
+    <form>
+        <fieldset style="height: 400px;">
+            
+            <div class="status" id="Order">
+                <h1>Your order is being processed </h1>
+            </div>
+
+            <div class="status" id="Order2">
+                <h1>Your order is done  </h1>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            <script>
+            $(document).ready(function(){
+                $("#Order").show();
+                
+                setTimeout(function(){
+                    $("#Order").hide();
+                    $("#Order2").show();
+                }, 3000);
+            });
+            </script>
+
+        </fieldset>
+    </form>
+    <br>
+
+</body>
 </html>
