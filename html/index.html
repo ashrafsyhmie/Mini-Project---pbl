@@ -1,35 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
 </head>
-
-<body style="text-align:center ;font-family:'WildWest';background-color: #F1F5F8">
-
-<h1> EsWarung </h1>
-<h2> Login Page </h2>
-
-
-<table border="0" align=center>
-
-<tr>
-<td> <p><b> Name : </b> </td>
-<td> <input type="text" name="a" size="50" style="border-radius: 5px ;height:30px"> </p> </td>
-
-</tr>
-
-<tr>
-<td> <p><b> Password : </b> </td>
-<td> <input type="text" name="b" size="50" style="border-radius: 5px ;height:30px"> </p> </td>
-</tr>
-</table>
-<br>
-<table align=center>
-<td><button  style="background-color:176BCD; color:white ;height:33px;width:60px"> Login </button></td>
-<td><button  style="background-color:176BCD; color:white ;height:33px;width:60px"> Sign Up </button></td>
-<td><button  style="background-color:176BCD; color:white ;height:33px;width:60px"> Admin </button></td>
-</table>
-</body>
-
-<br>
+<body style="text-align:center ;font-family:monospace;background-color:#F1F5F8">
+  <h1> EsWarung </h1>
+  <h2> Login Page </h2>
+  <form action="">
+    <table border="0" align=center>
+      
+      <tr>
+      <td> <b> Name : </b> </td>
+      <td> <input type="text" name="username" size="50" id="username" style="border-radius: 5px ;height:30px" required>  </td>
+      
+      </tr>
+      <tr>
+        <td>‎</td>
+      </tr>
+      <tr>
+      <td> <b> Password : </b> </td>
+      <td> <input type="password" name="password" size="50" style="border-radius: 5px ;height:30px" required> </p> </td>
+      </tr>
+      </table>
+      <br>
+      <table align=center>
+      <td><input type="submit" value="Login" style="background-color:#176BCD; color:white ;height:33px;width:80px" onclick="redirectToMainMenu()"/></td>
+      <td><button  style="background-color:#176BCD; color:white ;height:33px;width:80px" onclick="redirectToRegister()"> Sign Up </button></td>
+      <td><button  style="background-color:#176BCD; color:white ;height:33px;width:80px" onclick="redirectToAdminPage()"> Admin </button></td>
+      </table>
+  </form>
+    
+    <script>
+        function redirectToMainMenu() {
+          window.location.href = "menu.html";
+        }
+        function redirectToAdminPage() {
+          window.location.href = "admin_page.html";
+        }
+        function redirectToRegister() {
+          window.location.href = "register.html";
+        }
+      </script>
 </body>
 </html>
+
+
+
+
+
+
+
