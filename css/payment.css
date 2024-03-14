@@ -38,3 +38,9 @@ button {
 img {
   border-radius: 20px;
 }
+
+.to-blur {
+  filter: grayscale(100%); /* Makes the elements appear fully grayscale */
+  /* or */
+  filter: brightness(0.7); /* Reduces the brightness of the elements to 70% */
+}

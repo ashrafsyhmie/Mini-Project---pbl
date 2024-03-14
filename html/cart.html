@@ -40,12 +40,40 @@
     <br />
 
     <div class="button-container" style="text-align: center">
-      <input type="submit" value="Edit" onclick="redirectToMenu()" />
-      <input type="reset" value="Delete" />
+      <input
+        type="submit"
+        value="Edit"
+        onclick="redirectToMenu()"
+        style="
+          background-color: #176bcd;
+          color: white;
+          height: 33px;
+          width: 80px;
+          border-radius: 13px;
+        "
+      />
+      <input
+        type="reset"
+        value="Delete"
+        style="
+          background-color: #176bcd;
+          color: white;
+          height: 33px;
+          width: 80px;
+          border-radius: 13px;
+        "
+      />
       <input
         type="submit"
         value="Submit Order"
-        onclick="redirectToOrderStatus()"
+        onclick="redirectToPayment()"
+        style="
+          background-color: #176bcd;
+          color: white;
+          height: 33px;
+          width: 100px;
+          border-radius: 13px;
+        "
       />
     </div>
 
@@ -53,8 +81,8 @@
       function redirectToMenu() {
         window.location.href = "menu.html";
       }
-      function redirectToOrderStatus() {
-        window.location.href = "order_status.html";
+      function redirectToPayment() {
+        window.location.href = "payment.html";
       }
     </script>
   </body>

@@ -12,7 +12,7 @@
 
       <h2>Choose payment option and fill in the requested information</h2>
     </div>
-    <form action="">
+    <form action="order_status.html">
       <table
         align="center"
         border="0
@@ -25,17 +25,23 @@
                 <td width="100">
                   <input
                     type="radio"
-                    class="radio-button"
+                    class="radio-button element 1"
                     name="type"
+                    id="cash"
                     value="Cash"
+                    onclick="handleRadioClick()"
+                    required
                   />Cash
                 </td>
                 <td width="100">
                   <input
                     type="radio"
-                    class="radio-button"
+                    class="radio-button element 2"
                     name="type"
+                    id="credit-card"
                     value="Credit card"
+                    onclick="handleRadioClick()"
+                    required
                   />Credit Card
                 </td>
                 <td colspan="2" width="200">
@@ -78,7 +84,13 @@
                 <td width="100">
                   CVV
                   <br />
-                  <input type="number" required size="3" style="width: 30px" />
+                  <input
+                    type="number"
+                    required
+                    size="3"
+                    style="width: 40px"
+                    placeholder="XXX"
+                  />
                 </td>
               </tr>
               <tr align="center">
@@ -111,13 +123,30 @@
       </table>
       <br />
       <div class="button-container" style="text-align: center">
-        <input type="submit" value="Done" onclick="redirectToOrderStatus()" />
+        <input
+          type="submit"
+          value="Done"
+          style="
+            background-color: #176bcd;
+            color: white;
+            height: 33px;
+            width: 100px;
+            border-radius: 13px;
+          "
+        />
       </div>
     </form>
 
     <script>
       function redirectToOrderStatus() {
         window.location.href = "order_status.html";
+      }
+      function handleRadioClick() {
+        var elementsToBlur = document.querySelectorAll(".to-blur");
+
+        elementsToBlur.forEach(function (element) {
+          element.blur();
+        });
       }
     </script>
   </body>
