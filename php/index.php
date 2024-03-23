@@ -6,11 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Login Page</title>
-
+  <style>
+    * {
+      text-align: center;
+      font-family: monospace;
+      background-color: #F1F5F8;
+    }
+  </style>
 </head>
 
-<body style="text-align:center ;font-family:monospace;background-color:#F1F5F8">
-  <h1> EsWarung </h1>
+<body>
+  <h1> THAF RESTAURANT </h1>
   <h2> Login Page </h2>
   <form action="menu.html">
     <table border="0" align=center>

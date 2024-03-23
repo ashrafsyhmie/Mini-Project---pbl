@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
+    <style>
+        * {
+            text-align: center;
+            font-family: monospace;
+            background-color: #F1F5F8;
+        }
+    </style>
 </head>
 
-<body style="font-family: monospace;">
+<body>
     <h1 style="text-align: center;"> EsWarung </h1>
     <h2 style="text-align: center;"> Register Page </h2>
     <form action="register.php">

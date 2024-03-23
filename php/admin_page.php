@@ -5,14 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
+    <style>
+        * {
+            font-family: monospace;
+            background-color: #F1F5F8;
+        }
+
+        b {
+            font-size: 16px;
+        }
+    </style>
 </head>
 
-<body style="font-family: monospace;">
+<body>
 
     <form action="admin_page.html">
 
         <h1 style="text-align: center;"> EsWarung </h1>
-        <h2 style="text-align: center;"> Customer Management Page </h2>
+        <h2 style="text-align: center;"> Employee Management Page </h2>
 
         <table border="0" align=center>
 
@@ -75,19 +85,16 @@
                     </select>
                 </td>
             </tr>
-
-
-
-            <tr>
-                <td></td>
-                <td> <input type="checkbox" name="a" value="checkbox" required> I have confirm that all the information above is true </td>
-            </tr>
             <tr>
                 <td><b>Comments:</b></td>
                 <td><textarea rows="3" cols="50">
 
                 </textarea>
                 </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <input type="checkbox" name="a" value="checkbox" required> I have confirm that all the information above is true </td>
             </tr>
         </table>
         <br>
