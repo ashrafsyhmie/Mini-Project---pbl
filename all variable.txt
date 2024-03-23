@@ -1,0 +1,151 @@
+$nasi_goreng 
+$mee_goreng 
+$roti_canai
+$nasi_lemak 
+$ayam_penyet 
+$kuey_teow 
+$teh_tarik 
+$kopi 
+$bandung_soda
+
+$nasi_goreng_price = 5.00;
+$mee_goreng_price = 6.00;
+$roti_canai_price = 2.00;
+$nasi_lemak_price = 2.50;
+$ayam_penyet_price = 7.00;
+$kuey_teow_price = 4.00;
+$teh_tarik_price = 2.00;
+$kopi_price = 2.00;
+$bandung_soda_price = 3.00;
+
+$nasi_goreng_total = $nasi_goreng * $nasi_goreng_price;
+$mee_goreng_total = $mee_goreng * $mee_goreng_price;
+$roti_canai_total = $roti_canai * $roti_canai_price;
+$nasi_lemak_total = $nasi_lemak * $nasi_lemak_price;
+$ayam_penyet_total = $ayam_penyet * $ayam_penyet_price;
+$kuey_teow_total = $kuey_teow * $kuey_teow_price;
+$teh_tarik_total = $teh_tarik * $teh_tarik_price;
+$kopi_total = $kopi * $kopi_price;
+$bandung_soda_total = $bandung_soda * $bandung_soda_price;
+
+/* Create database
+$sql = "CREATE DATABASE pbl1";
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($conn);
+}*/
+
+/* sql to create table
+$sql = "CREATE TABLE menu (
+    nasi_goreng INT NOT NULL , 
+    mee_goreng INT NOT NULL , 
+    roti_canai INT NOT NULL , 
+    nasi_lemak INT NOT NULL,
+    ayam_penyet INT NOT NULL,
+    kuew_teow INT NOT NULL,
+    teh_tarik INT NOT NULL,
+    kopi INT NOT NULL,
+    bandung_soda INT NOT NULL
+     ) ENGINE = InnoDB;";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Table menu created successfully";
+} else {
+    echo "Error creating table: " . mysqli_error($conn);
+}*/
+
+
+<input type="number" name="nasi_goreng" value="<?php echo $nasi_goreng; ?>">
+<input type="number" name="mee_goreng" value="<?php echo $mee_goreng; ?>">
+<input type="number" name="roti_canai" value="<?php echo $roti_canai; ?>">
+<input type="number" name="nasi_lemak" value="<?php echo $nasi_lemak; ?>">
+<input type="number" name="ayam_penyet" value="<?php echo $ayam_penyet; ?>">
+<input type="number" name="kuey_teow" value="<?php echo $kuey_teow; ?>">
+<input type="number" name="teh_tarik" value="<?php echo $teh_tarik; ?>">
+<input type="number" name="kopi" value="<?php echo $kopi; ?>">
+<input type="number" name="bandung_soda" value="<?php echo $bandung_soda; ?>">
+
+
+$sql = "INSERT INTO menu (nasi_goreng,
+                          mee_goreng,
+                          roti_canai,
+                          nasi_lemak,
+                          ayam_penyet,
+                          kuey_teow,
+                          teh_tarik,
+                          kopi,
+                          bandung_soda)
+       VALUES($nasi_goreng,
+              $mee_goreng,
+              $roti_canai,
+              $nasi_lemak,
+              $ayam_penyet,
+              $kuey_teow,
+              $teh_tarik,
+              $kopi,
+              $bandung_soda)";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Data inserted successfully";
+} else {
+    echo "Error: " . mysqli_error($conn);
+}
+
+
+<?php
+
+$menu = array(
+    "nasi_goreng" => 0,
+    "mee_goreng" => 0,
+    "roti_canai" => 0,
+    "nasi_lemak" => 0,
+    "ayam_penyet" => 0,
+    "kuey_teow" => 0,
+    "teh_tarik" => 0,
+    "kopi" => 0,
+    "bandung_soda" => 0
+);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="test.php" method="post">
+        <div class="nasi_goreng">
+
+            <input type="number" value="0" " min=" 0" name="nasi_goreng" />
+            <h3>Nasi Goreng</h3>
+        </div>
+        <div class="mee_goreng">
+
+            <input type="number" value="0" " min=" 0" name="mee_goreng" />
+            <h3>Mee Goreng</h3>
+        </div>
+
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+
+</html>
+
+<?php
+
+$nasi_goreng = $_POST["nasi_goreng"];
+$menu["nasi_goreng"] = $nasi_goreng;
+
+foreach ($menu as $x => $y) {
+    echo "$x: $y <br>";
+}
+
+
+
+?>
